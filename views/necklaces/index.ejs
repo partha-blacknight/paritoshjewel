@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title><%= title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="all" href="/stylesheets/style.css">
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+
+
+	<nav id="menu">
+		<div class="container">
+			<div class="trigger"></div>
+			<ul>
+				<li><a href="/newcollections">New collection</a></li>
+				<li><a href="/necklaces">necklaces</a></li>
+				<li><a href="/earings">earrings</a></li>
+				<li><a href="/rings">Rings</a></li>
+				<li><a href="/giftcard">Gift cards</a></li>
+				<li><a href="/promotion">Promotions</a></li>
+			</ul>
+		</div>
+		<!-- / container -->
+	</nav>
+	<!-- / navigation -->
+
+	<div id="breadcrumbs">
+		<div class="container">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li>Product results</li>
+			</ul>
+		</div>
+		<!-- / container -->
+	</div>
+	<!-- / body -->
+
+	<div id="body">
+		<div class="container">
+			<div class="products-wrap">
+				<div id="content">
+					<section class="products">
+						<% for(var i=0; i<necklaces.length; i++) { %>
+						<article>
+							<a href=""><img src="../../uploads/<%= necklaces[i].pic%>" alt="" style="width:100px; height:200px"
+								class="img-responsive"></a>
+							<h3><a href=""><%= necklaces[i].name%></a></h3>
+							<span><%= necklaces[i].price%></span>
+						</article>
+						<% } %>
+						<!-- <article>
+							<a href="product.html"><img src="images/12.jpg" alt=""></a>
+							<h3><a href="product.html">cupidatat non proident</a></h3>
+							
+							
+						</article>
+						<article>
+							<a href="product.html"><img src="images/13.jpg" alt=""></a>
+							<h3><a href="product.html">Duis aute irure</a></h3>
+							
+							
+						</article>
+						<article>
+							<a href="product.html"><img src="images/14.jpg" alt=""></a>
+							<h3><a href="product.html">magna aliqua</a></h3>
+							
+							
+						</article>
+						<article>
+							<a href="product.html"><img src="images/15.jpg" alt=""></a>
+							<h3><a href="product.html">Lorem ipsum dolor</a></h3>
+							
+							
+						</article>
+						<article>
+							<a href="product.html"><img src="images/1.jpg" alt=""></a>
+							<h3><a href="product.html">cupidatat non proident</a></h3>
+							
+							
+						</article>
+						<article>
+							<a href="product.html"><img src="images/16.jpg" alt=""></a>
+							<h3><a href="product.html">Duis aute irure</a></h3>
+							
+							
+						</article>
+						<article>
+							<a href="product.html"><img src="images/17.jpg" alt=""></a>
+							<h3><a href="product.html">magna aliqua</a></h3>
+							
+							
+						</article> -->
+					</section>
+				</div>
+				<!-- / content -->
+			</div>
+
+		</div>
+		<!-- / container -->
+	</div>
+	<!-- / body -->
+
+	<footer id="footer">
+		<div class="container">
+			<div class="cols">
+				<div class="col">
+					<h3>Frequently Asked Questions</h3>
+					<ul>
+						<li><a href="#">Fusce eget dolor adipiscing </a></li>
+						<li><a href="#">Posuere nisl eu venenatis gravida</a></li>
+						<li><a href="#">Morbi dictum ligula mattis</a></li>
+						<li><a href="#">Etiam diam vel dolor luctus dapibus</a></li>
+						<li><a href="#">Vestibulum ultrices magna </a></li>
+					</ul>
+				</div>
+				<div class="col media">
+					<h3>Social media</h3>
+					<ul class="social">
+						<li><a href="#"><span class="ico ico-fb"></span>Facebook</a></li>
+						<li><a href="#"><span class="ico ico-tw"></span>Twitter</a></li>
+						<li><a href="#"><span class="ico ico-gp"></span>Google+</a></li>
+						<li><a href="#"><span class="ico ico-pi"></span>Pinterest</a></li>
+					</ul>
+				</div>
+				<div class="col contact">
+					<h3>Contact us</h3>
+					<p>Diana’s Jewelry INC.<br>54233 Avenue Street<br>New York</p>
+					<p><span class="ico ico-em"></span><a href="#">contact@dianasjewelry.com</a></p>
+					<p><span class="ico ico-ph"></span>(590) 423 446 924</p>
+				</div>
+				<div class="col newsletter">
+					<h3>Join our newsletter</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium.</p>
+					<form action="#">
+						<input type="text" placeholder="Your email address...">
+						<button type="submit"></button>
+					</form>
+				</div>
+			</div>
+			<p class="copy">Copyright 2013 Jewelry. All rights reserved.</p>
+		</div>
+		<!-- / container -->
+	</footer>
+	<!-- / footer -->
+
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>window.jQuery || document.write("<script src='/javascripts/jquery-1.11.1.min.js'>\x3C/script>")</script>
+	<script src="/javascripts/plugins.js"></script>
+	<script src="/javascripts/main.js"></script>
+</body>
+</html>

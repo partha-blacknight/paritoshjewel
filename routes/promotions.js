@@ -33,5 +33,30 @@ router.get('/', function(req, res, next) {
         }
     });
 });
+// display single product page
+router.get('/product/(:id)', function(req, res, next) {
+    let id = req.params.id;
+    dbConnection.query('SELECT * FROM product WHERE id = ' + id, function(err, rows, fields) {
+        if(err) throw err
+        // if user not found
+        if (rows.length <= 0) {
+            req.flash('error', 'Product not found with id = ' + id)
+            res.redirect('/promotions')
+        }
+        // if book found
+        else {
+            // render to edit.ejs
+            res.render('promotions/product', {
+                title: 'Product', 
+                id: rows[0].id,
+                name: rows[0].name,
+                category: rows[0].category,
+                description: rows[0].description,
+                price: rows[0].price,
+                pic: rows[0].pic
+            })
+        }
+    })
+});
 
 module.exports = router;

@@ -18,12 +18,28 @@
 		<div class="container">
 			<div class="trigger"></div>
 			<ul>
-				<li><a href="/newcollections">New collection</a></li>
-				<li><a href="/necklaces">necklaces</a></li>
-				<li><a href="/earings">earrings</a></li>
-				<li><a href="/rings">Rings</a></li>
-				<li><a href="/giftcard">Gift cards</a></li>
-				<li><a href="/promotion">Promotions</a></li>
+				<li><a href="/babybracelet">Baby Braclet</a></li>
+				<li><a href="/rings">Ring</a></li>
+				<li><a href="/bala">Bala</a></li>
+				<li><a href="/chain">Chain</a></li>
+				<li><a href="/chik">Chik</a></li>
+				<li><a href="/chur">Chur</a></li>
+				<li><a href="/churi">Churi</a></li>
+				<li><a href="/nosepin">nosepin</a></li>
+				<li><a href="/kora">Kora</a></li>
+				<li><a href="/lohabadhano">Loha Badhano</a></li>
+				<li><a href="/manglesutra">Mangle Sutra</a></li>
+				<li><a href="/mantassa">Mantasa</a></li>
+				<li><a href="/necklaces">Neckless</a></li>
+				<li><a href="/pasa">Pasa</a></li>
+				<li><a href="/pearlpendant">Pearl Pendent</a></li>
+				<li><a href="/locket">Locket</a></li>
+				<li><a href="/sakha">Sakha</a></li>
+				<li><a href="/earings">Earings</a></li>
+				<li><a href="/tana">Tana</a></li>
+				<li><a href="/tikli">Tikli</a></li>
+				<li><a href="/wrislet">Wrislet</a></li>
+				<li><a href="/newcollections">New Collection</a></li>
 			</ul>
 		</div>
 		<!-- / container -->
@@ -48,7 +64,7 @@
 					<section class="products">
 						<% for(var i=0; i<necklaces.length; i++) { %>
 						<article>
-							<a href=""><img src="../../uploads/<%= necklaces[i].pic%>" alt="" style="width:100px; height:200px"
+							<a href="necklaces/product/<%=necklaces[i].id%>"><img src="../../uploads/<%= necklaces[i].pic%>" alt="" style="width:100px; height:200px"
 								class="img-responsive"></a>
 							<h3><a href=""><%= necklaces[i].name%></a></h3>
 							<span><%= necklaces[i].price%></span>

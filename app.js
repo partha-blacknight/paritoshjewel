@@ -16,6 +16,24 @@ const necklacesRouter = require('./routes/necklace');
 const earingsRouter = require('./routes/earings');
 const ringsRouter = require('./routes/rings');
 const promotionsRouter = require('./routes/promotions');
+const babyBraceletRouter = require('./routes/babybracelet');
+const balaRouter = require('./routes/bala');
+const chainRouter = require('./routes/chains');
+const chiksRouter = require('./routes/chiks');
+const chursRouter = require('./routes/churs');
+const churisRouter = require('./routes/churis');
+const nosepinRouter = require('./routes/nosepins');
+const korasRouter = require('./routes/koras');
+const lohabadhanosRouter = require('./routes/lohabadhanos');
+const mangalsutrasRouter = require('./routes/mangalsutras');
+const mantasasRouter = require('./routes/mantasas');
+const pasasRouter = require('./routes/pasas');
+const pendantsRouter = require('./routes/pendants');
+const locketsRouter = require('./routes/lockets');
+const sakhasRouter = require('./routes/sakhas');
+const tanasRouter = require('./routes/tanas');
+const tiklisRouter = require('./routes/tiklis');
+const wristletsRouter = require('./routes/wristlets');
 
 const port = process.env.PORT || 3001;
 
@@ -46,12 +64,29 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/AAXXUAUUI_DHUHQIWRIOWHEUIFSB_CZIZJCNJCSD_EBWUIFBUIWBEFIB_SABICUAS_PRODUCT', productsRouter);
 app.use('/newcollections', newcollectionsRouter);
-//app.use('/newcollections/singleproduct', newcollectionsRouter);
+app.use('/newcollections/singleproduct', newcollectionsRouter);
 app.use('/necklaces', necklacesRouter);
 app.use('/earings', earingsRouter);
 app.use('/rings', ringsRouter);
 app.use('/promotion', promotionsRouter);
-
+app.use('/babybracelet', babyBraceletRouter);
+app.use('/bala', balaRouter);
+app.use('/chain', chainRouter);
+app.use('/chik', chiksRouter);
+app.use('/chur', chursRouter);
+app.use('/churi', churisRouter);
+app.use('/nosepin', nosepinRouter);
+app.use('/kora', korasRouter);
+app.use('/lohabadhano', lohabadhanosRouter);
+app.use('/manglesutra', mangalsutrasRouter);
+app.use('/mantassa', mantasasRouter);
+app.use('/pasa', pasasRouter);
+app.use('/pearlpendant', pendantsRouter);
+app.use('/locket', locketsRouter);
+app.use('/sakha', sakhasRouter);
+app.use('/tana', tanasRouter);
+app.use('/tikli', tiklisRouter);
+app.use('/wrislet', wristletsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

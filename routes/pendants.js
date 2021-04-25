@@ -18,22 +18,21 @@ const storage = multer.diskStorage({
 });
 // display books page
 router.get('/', function(req, res, next) {
-    dbConnection.query("SELECT * FROM product WHERE category='Necklace' ORDER BY id desc",function(err,rows)     {
+    dbConnection.query("SELECT * FROM product WHERE category='Pendants' ORDER BY id desc",function(err,rows)     {
         if(err) {
             req.flash('error', err);
             // render to views/books/index.ejs
-            res.render('necklaces',{necklaces: ''});   
+            res.render('pendant',{pendants: ''});   
         } else {
             // render to views/books/index.ejs
             console.log(rows)
-            res.render('necklaces', {
-                necklaces: rows,
-                title: 'Necklaces'
+            res.render('pendant', {
+                pendants: rows,
+                title: 'Pearl Pendant'
             });
         }
     });
 });
-
 // display single product page
 router.get('/product/(:id)', function(req, res, next) {
     let id = req.params.id;
@@ -42,12 +41,12 @@ router.get('/product/(:id)', function(req, res, next) {
         // if user not found
         if (rows.length <= 0) {
             req.flash('error', 'Product not found with id = ' + id)
-            res.redirect('/necklaces')
+            res.redirect('/pendant')
         }
         // if book found
         else {
             // render to edit.ejs
-            res.render('necklaces/product', {
+            res.render('pendant/product', {
                 title: 'Product', 
                 id: rows[0].id,
                 name: rows[0].name,

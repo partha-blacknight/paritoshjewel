@@ -50,11 +50,12 @@ router.get('/product/(:id)', function(req, res, next) {
                 id: rows[0].id,
                 name: rows[0].name,
                 category: rows[0].category,
+                description: rows[0].description,
                 price: rows[0].price,
                 pic: rows[0].pic
             })
         }
     })
-})
+});
 
 module.exports = router;
